@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { Alert, FooterLink } from 'flowbite-svelte';
+	import { base } from '$app/paths';
+
+	import test from '$lib/assets/test.jpg?run';
+	import Img from '@zerodevx/svelte-img';
 </script>
 
 <div class="p-8">
-	<Alert>
-		<span class="font-medium">Info alert!</span> Change a few s up and try submitting again.
-	</Alert>
-
-	<a href="/about">to about</a>
+	<Img class="w-full" src="{test}" alt="test" />
 </div>
