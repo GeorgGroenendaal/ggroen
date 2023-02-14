@@ -8,7 +8,10 @@
 		"vscode": {
 			"extensions": [
 				"GitHub.copilot",
-				"svelte.svelte-vscode"
+				"svelte.svelte-vscode",
+				"esbenp.prettier-vscode",
+				"heybourn.headwind",
+				"bradlc.vscode-tailwindcss"
 			]
 		}
 	}
