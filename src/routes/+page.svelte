@@ -69,13 +69,15 @@
 			<div class="flex-[3_3_0%]">
 				<h2 class="mb-2 text-4xl">About me</h2>
 				<p class="font-serif text-lg">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque venenatis lorem
-					ut porttitor. Suspendisse et magna sollicitudin, gravida turpis at, luctus ante. Aenean
-					tristique neque id velit aliquet commodo. Duis tincidunt eros eu neque consectetur
-					gravida. Pellentesque vel mauris risus. Nullam in velit sed est cursus consectetur.
-					Aliquam dolor lacus, faucibus eget consectetur in, vestibulum vitae sapien. Suspendisse
-					rhoncus porttitor nisl, ac vehicula est ultricies sit amet. Proin id molestie felis, vitae
-					ullamcorper libero. Nulla ac nulla porta, aliquet leo vel, suscipit tellus.
+					Hello there, I'm Georg, a Masters student in artificial intelligence with a background in
+					software engineering. I'm passionate about exploring various topics in computer science
+					and artificial intelligence, ranging from machine learning and data analysis to natural
+					language processing and computer vision. Besides academic pursuits, I'm enthusiastic about
+					building software and products. I enjoy using my skills to develop innovative solutions
+					and improve existing systems. On this site, I'll be sharing my thoughts and insights on
+					various topics related to computer science, data science, and artificial intelligence.
+					I'll also be sharing my projects, code samples, tutorials, and other resources. If you
+					have any questions or suggestions, please don't hesitate to get in touch.
 				</p>
 			</div>
 		</div>
@@ -148,21 +150,24 @@
 		<h2 class="text-4xl font-bold">Projects</h2>
 
 		<div class="grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 grid items-end gap-6">
-			{#each [1, 2, 3] as z}
-				<a href="#">
+			{#each [1] as z}
+				<a href="/" class="disabled opacity-80 saturate-0 cursor-default">
 					<div
-						class="transition shadow bg-white rounded-lg border border-opacity-0 hover:border-primary-700 hover:brightness-125"
+						class="transition shadow bg-white rounded-lg border border-opacity-0 border-primary-700 brightness-125"
 					>
 						<div
 							class="h-32 bg-gradient-to-tl from-primary-400 to-primary-800 rounded-t-lg border-b border-primary-900"
 						/>
 
 						<div class="px-4 pt-2 pb-4">
-							<h3 class="text-xl font-bold">Sample project</h3>
-							<p class="text-sm">project description</p>
+							<h3 class="text-xl font-bold">Sveltekit static portfolio starter</h3>
+							<p class="text-sm">
+								(Coming soon) Open sourced template of this website, built with Sveltekit, Tailwind
+								and hosted on Github Pages.
+							</p>
 
 							<div class="pt-4">
-								<Tag>hello</Tag>
+								<Tag>coming soon</Tag>
 							</div>
 						</div>
 					</div>

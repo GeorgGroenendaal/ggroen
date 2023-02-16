@@ -13,7 +13,7 @@
 		class="prose flex-grow prose-headings:text-dark prose-headings:font-sans max-w-2xl prose-p:font-serif prose-p:text-dark prose-lg prose-a:text-accent-400 "
 	>
 		<div class="not-prose text-dark">
-			<h1 class="mb-2 text-6xl font-bold">{data.title}</h1>
+			<h1 class="mb-2 text-5xl font-bold">{data.title}</h1>
 			<p class="text-sm">Published on {data.date}</p>
 		</div>
 

@@ -3,8 +3,8 @@
 	import { page } from '$app/stores';
 
 	const links = {
-		'/': 'home'
-		// '/': 'blog',
+		'/': 'home',
+		'/blog': 'blog'
 		// '/': 'projects',
 		// '/': 'contact'
 	};
