@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import type { PageData } from './$types';
 
 	import profile_avif from '$lib/assets/profile.jpg?width=16;112&format=avif&srcset&imagetools';
 	import profile_webp from '$lib/assets/profile.jpg?width=16;112&format=webp&srcset&imagetools';
@@ -22,14 +23,16 @@
 			period: '2015-2019'
 		}
 	];
+
+	export let data: PageData;
 </script>
 
-<div class="py-12 bg-theme-800 text-light">
+<div class="py-12 bg-primary-800 text-light">
 	<div class="container max-w-screen-xl px-4 mx-auto ">
 		<div class="flex flex-col mb-12 md:flex-row">
 			<div class="flex flex-col flex-grow text-center md:text-left">
 				<div>
-					<div class="inline-block p-2 rounded shadow bg-theme-700">
+					<div class="inline-block p-2 rounded shadow bg-primary-700">
 						<picture>
 							<source type="image/avif" srcset={profile_avif} />
 							<source type="image/webp" srcset={profile_webp} />
@@ -78,7 +81,7 @@
 				<p class="mb-2 text-2xl">Interest</p>
 
 				{#each education as edu}
-					<div class="flex px-2 py-1 space-x-2 rounded shadow items-top bg-theme-700">
+					<div class="flex px-2 py-1 space-x-2 rounded shadow items-top bg-primary-700">
 						<iconify-icon class="pt-2" icon="carbon:education" width="30" />
 						<div class="grow">
 							<p>{edu.degree}</p>
@@ -97,7 +100,7 @@
 				<p class="mb-2 text-2xl">Education</p>
 
 				{#each education as edu}
-					<div class="flex px-2 py-1 space-x-2 rounded shadow items-top bg-theme-700">
+					<div class="flex px-2 py-1 space-x-2 rounded shadow items-top bg-primary-700">
 						<iconify-icon class="pt-2" icon="carbon:education" width="30" />
 						<div class="grow">
 							<p>{edu.degree}</p>
@@ -116,7 +119,7 @@
 				<p class="mb-2 text-2xl">Experience</p>
 
 				{#each education as edu}
-					<div class="flex px-2 py-1 space-x-2 rounded shadow items-top bg-theme-700">
+					<div class="flex px-2 py-1 space-x-2 rounded shadow items-top bg-primary-700">
 						<iconify-icon class="pt-2" icon="carbon:education" width="30" />
 						<div class="grow">
 							<p>{edu.degree}</p>
@@ -131,5 +134,66 @@
 				{/each}
 			</div>
 		</div>
+	</div>
+</div>
+
+<div
+	class="container mx-auto px-4 max-w-screen-xl py-20 flex flex-col md:flex-row md:space-x-12 space-y-12 md:space-y-0"
+>
+	<div class=" rounded flex flex-col space-y-4 flex-grow">
+		<h2 class="text-4xl font-bold">Projects</h2>
+
+		<div class="grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 grid items-end gap-6">
+			{#each [1, 2, 3] as z}
+				<a href="#">
+					<div
+						class="transition shadow bg-white rounded-lg border border-opacity-0 hover:border-primary-700 hover:brightness-125"
+					>
+						<div
+							class="h-32 bg-gradient-to-tl from-primary-400 to-primary-800 rounded-t-lg border-b border-primary-900"
+						/>
+
+						<div class="px-4 pt-2 pb-4">
+							<h3 class="text-xl font-bold">Sample project</h3>
+							<p class="text-sm">project description</p>
+
+							<div class="pt-4">
+								<span
+									class="inline-block bg-gradient-to-r from-primary-700 to-primary-800 text-light rounded-full px-2 text-sm font-semibold mr-2"
+								>
+									sample tag
+								</span>
+							</div>
+						</div>
+					</div>
+				</a>
+			{/each}
+		</div>
+	</div>
+	<div class="rounded flex flex-grow flex-col space-y-4 md:max-w-sm">
+		<h2 class="text-4xl font-bold">Blog</h2>
+		{#each data.blog as b}
+			<a href="{base}/blog/{b.slug}">
+				<div
+					class="px-4 transition py-2 border border-opacity-0 rounded-lg hover:border-primary-700 hover:brightness-125 shadow"
+				>
+					<div class="flex justify-between items-baseline space-x-4">
+						<h3 class="text-xl font-bold">
+							{b.title}
+						</h3>
+						<p class="text-sm  text-opacity-75 font-thin">
+							{b.date}
+						</p>
+					</div>
+					{#each b.tags as tag}
+						<span
+							class="inline-block bg-gradient-to-r from-primary-700 to-primary-800 text-light rounded-full px-2 text-sm font-semibold mr-2"
+						>
+							{tag}
+						</span>
+					{/each}
+				</div>
+			</a>
+		{/each}
 	</div>
 </div>

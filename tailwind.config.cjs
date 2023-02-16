@@ -12,10 +12,7 @@ const config = {
         sans: ["Source Sans Pro", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        light: '#f2f7f3',
-        lesslight: '#b8c1b8',
-        dark: '#020802',
-        'theme': {
+        'primary': {
           '50': '#eefbf3',
           '100': '#d6f5e1',
           '200': '#b1e9c8',
@@ -27,10 +24,26 @@ const config = {
           '800': '#125339',
           '900': '#0f4530',
         },
+        'dark': '#04110C',
+        'light': '#EEFBF6',
+        'accent': {
+          '50': '#fff4ec',
+          '100': '#ffe5d3',
+          '200': '#ffc8a7',
+          '300': '#ffa16f',
+          '400': '#ff6e35',
+          '500': '#ff480e',
+          '600': '#f42c04',
+          '700': '#c91c05',
+          '800': '#9f180d',
+          '900': '#80170e',
+        },
       }
     },
   },
-
+  plugins: [
+    require('@tailwindcss/typography'),
+  ]
 };
 
 module.exports = config;

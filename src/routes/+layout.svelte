@@ -10,14 +10,14 @@
 	};
 </script>
 
-<div class="sticky top-0 left-0 right-0 text-lg tracking-wide bg-theme-800 bg-opacity-95">
+<div class="sticky top-0 left-0 right-0 text-lg tracking-wide bg-primary-900 text-light">
 	<div
-		class="container flex items-center justify-between max-w-screen-xl px-4 py-3 mx-auto sm:py-6 text-theme-50"
+		class="container flex items-center justify-between max-w-screen-xl px-4 py-3 mx-auto sm:py-6"
 	>
 		<div class="relative flex items-center my-2">
-			<div class="absolute z-20 w-10 h-10 rounded-sm shadow -top-2 -left-2 bg-theme-100" />
-			<div class="z-10 w-10 h-10 rounded-sm shadow bg-theme-200" />
-			<div class="absolute w-10 h-10 rounded-sm shadow top-2 left-2 bg-theme-300" />
+			<div class="absolute z-20 w-10 h-10 rounded-sm shadow -top-2 -left-2 bg-primary-100" />
+			<div class="z-10 w-10 h-10 rounded-sm shadow bg-primary-200" />
+			<div class="absolute w-10 h-10 rounded-sm shadow top-2 left-2 bg-primary-300" />
 			<p class="hidden ml-4 text-xl select-none sm:block">ggroen.com</p>
 		</div>
 
@@ -37,11 +37,11 @@
 				/>
 			</div>
 			<div
-				class="absolute z-30 hidden w-40 px-2 py-2 space-x-2 text-left border rounded-md shadow right-1 group-focus:block bg-theme-800 border-theme-900 hover:block"
+				class="absolute z-30 hidden w-40 px-2 py-2 space-x-2 text-left border rounded-md shadow right-1 group-focus:block bg-primary-800 border-primary-900 hover:block"
 			>
 				<div class="flex flex-col space-y-2">
 					{#each Object.entries(links) as [href, label]}
-						<a class="px-2 py-1 rounded hover:brightness-75 hover:bg-theme-800" {href}>{label}</a>
+						<a class="px-2 py-1 rounded hover:brightness-75 hover:bg-primary-800" {href}>{label}</a>
 					{/each}
 				</div>
 			</div>
@@ -50,3 +50,8 @@
 </div>
 
 <slot />
+
+<div class="bg-dark text-light py-12">
+	<div class="flex container max-w-screen-xl" />
+	<!-- footer -->
+</div>
