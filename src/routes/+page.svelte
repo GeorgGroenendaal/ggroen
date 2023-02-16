@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 
-	import profile from '$lib/assets/profile.jpg?run';
-	import Img from '@zerodevx/svelte-img';
+	import profile_avif from '$lib/assets/profile.jpg?width=16;112&format=avif&srcset&imagetools';
+	import profile_webp from '$lib/assets/profile.jpg?width=16;112&format=webp&srcset&imagetools';
+	import profile from '$lib/assets/profile.jpg?width=16;112&format=jpeg&srcset&imagetools';
 
 	const education = [
 		{
@@ -29,10 +30,19 @@
 			<div class="flex flex-col flex-grow text-center md:text-left">
 				<div>
 					<div class="inline-block p-2 rounded shadow bg-theme-700">
-						<Img src={profile} class="object-cover rounded-sm w-28 h-28" />
+						<picture>
+							<source type="image/avif" srcset={profile_avif} />
+							<source type="image/webp" srcset={profile_webp} />
+							<img
+								srcset={profile}
+								class="object-cover rounded-sm w-28 h-28"
+								loading="lazy"
+								alt="Profile"
+							/>
+						</picture>
 					</div>
 					<h2 class="mb-2 text-4xl">Georg Groenendaal</h2>
-					<p class="font-serif text-sm">Software engineer and student Arificial Intelligence</p>
+					<p class="font-serif text-sm">Software engineer and student Artificial Intelligence</p>
 				</div>
 
 				<div class="flex items-center justify-center py-2 mt-2 space-x-2 md:justify-start">

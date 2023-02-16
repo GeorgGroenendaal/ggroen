@@ -3,10 +3,10 @@
 	import { page } from '$app/stores';
 
 	const links = {
-		'/': 'home',
-		'/blog': 'blog',
-		'/projects': 'projects',
-		'/contact': 'contact'
+		'/': 'home'
+		// '/': 'blog',
+		// '/': 'projects',
+		// '/': 'contact'
 	};
 </script>
 
