@@ -1,3 +1,5 @@
+import type { contentMeta } from './types';
+
 const components = import.meta.glob('../blog/*.md');
 
 export const loadAll = async () => {
@@ -34,12 +36,7 @@ export const loadOne = async (slug: string) => {
 };
 
 export const loadMeta = async () => {
-	const response: {
-		slug: string;
-		title: string;
-		date: string;
-		tags: string[];
-	}[] = [];
+	const response: contentMeta = [];
 
 	const posts = await loadAll();
 
@@ -51,6 +48,14 @@ export const loadMeta = async () => {
 			tags: post.metadata.tags
 		});
 	}
+
+	response.sort((a, b) => {
+		// convert DD-MM-YYYY to MM-DD-YYYY. european to american with regex
+		const a_converted = a.date.replace(/(\d+)-(\d+)-(\d+)/, '$2-$1-$3');
+		const b_converted = b.date.replace(/(\d+)-(\d+)-(\d+)/, '$2-$1-$3');
+
+		return Date.parse(a_converted) - Date.parse(b_converted);
+	});
 
 	return response;
 };

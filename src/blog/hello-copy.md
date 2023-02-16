@@ -1,6 +1,6 @@
 ---
 title: Why developing everything from scratch is a bad idea
-date: '16-2-2023'
+date: '19-2-2023'
 tags: ['hello', 'd']
 ---
 
