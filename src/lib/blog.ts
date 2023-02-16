@@ -6,11 +6,7 @@ export const loadAll = async () => {
 	let posts: {
 		[key: string]: {
 			component: ConstructorOfATypedSvelteComponent;
-			metadata: {
-				title: string;
-				date: string;
-				tags: string[];
-			};
+			metadata: contentMeta;
 		};
 	} = {};
 
@@ -36,7 +32,7 @@ export const loadOne = async (slug: string) => {
 };
 
 export const loadMeta = async () => {
-	const response: contentMeta = [];
+	const response: contentMeta[] = [];
 
 	const posts = await loadAll();
 
@@ -45,7 +41,8 @@ export const loadMeta = async () => {
 			slug,
 			title: post.metadata.title,
 			date: post.metadata.date,
-			tags: post.metadata.tags
+			tags: post.metadata.tags,
+			description: post.metadata.description
 		});
 	}
 

@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Logo from '../lib/components/Logo.svelte';
+
 	import '../app.postcss';
 	import { page } from '$app/stores';
 
@@ -14,20 +16,15 @@
 	<div
 		class="container flex items-center justify-between max-w-screen-xl px-4 py-3 mx-auto sm:py-6"
 	>
-		<div class="relative flex items-center my-2">
-			<div class="absolute z-20 w-10 h-10 rounded-sm shadow -top-2 -left-2 bg-primary-100" />
-			<div class="z-10 w-10 h-10 rounded-sm shadow bg-primary-200" />
-			<div class="absolute w-10 h-10 rounded-sm shadow top-2 left-2 bg-primary-300" />
-			<p class="hidden ml-4 text-xl select-none sm:block">ggroen.com</p>
-		</div>
+		<Logo />
 
-		<div class="items-center hidden space-x-4 sm:flex">
+		<nav class="items-center hidden space-x-4 sm:flex">
 			{#each Object.entries(links) as [href, label]}
 				<a class="align-middle hover:brightness-75 " {href}>{label}</a>
 			{/each}
-		</div>
+		</nav>
 
-		<button class="relative transition-all group sm:hidden">
+		<button class="relative transition-all group sm:hidden" aria-label="Expand navigation menu">
 			<div class="flex items-center">
 				<iconify-icon
 					class="group-focus:brightness-75"
@@ -39,11 +36,11 @@
 			<div
 				class="absolute z-30 hidden w-40 px-2 py-2 space-x-2 text-left border rounded-md shadow right-1 group-focus:block bg-primary-800 border-primary-900 hover:block"
 			>
-				<div class="flex flex-col space-y-2">
+				<nav class="flex flex-col space-y-2">
 					{#each Object.entries(links) as [href, label]}
 						<a class="px-2 py-1 rounded hover:brightness-75 hover:bg-primary-800" {href}>{label}</a>
 					{/each}
-				</div>
+				</nav>
 			</div>
 		</button>
 	</div>
@@ -52,6 +49,17 @@
 <slot />
 
 <div class="bg-dark text-light py-12">
-	<div class="flex container max-w-screen-xl" />
+	<div class="flex container max-w-screen-xl mx-auto items-center px-4">
+		<div class="hue-rotate-60 grow w-0">
+			<Logo noText={true} />
+		</div>
+
+		<!-- copyright notice -->
+		<div>
+			<p class="text-sm">&copy; {new Date().getFullYear()} Georg Groenendaal</p>
+		</div>
+
+		<div class="grow" />
+	</div>
 	<!-- footer -->
 </div>

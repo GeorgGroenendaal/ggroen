@@ -1,5 +1,5 @@
 <script lang="ts">
-	import BlogView from './BlogView.svelte';
+	import BlogView from '../lib/components/BlogView.svelte';
 
 	import Tag from '../lib/components/Tag.svelte';
 
@@ -9,6 +9,7 @@
 	import profile_avif from '$lib/assets/profile.jpg?width=16;112&format=avif&srcset&imagetools';
 	import profile_webp from '$lib/assets/profile.jpg?width=16;112&format=webp&srcset&imagetools';
 	import profile from '$lib/assets/profile.jpg?width=16;112&format=jpeg&srcset&imagetools';
+	import { page } from '$app/stores';
 
 	const education = [
 		{
@@ -31,6 +32,14 @@
 	export let data: PageData;
 </script>
 
+<svelte:head>
+	<title>Portfolio of Georg Groenendaal</title>
+	<meta
+		name="description"
+		content="Portfolio of Georg Groenendaal - Masters student in AI and software engineer. Discover my projects, code samples, and insights on various topics related to computer science and artificial intelligence."
+	/>
+</svelte:head>
+
 <div class="py-12 bg-primary-800 text-light">
 	<div class="container max-w-screen-xl px-4 mx-auto ">
 		<div class="flex flex-col mb-12 md:flex-row">
@@ -44,7 +53,7 @@
 								srcset={profile}
 								class="object-cover rounded-sm w-28 h-28"
 								loading="lazy"
-								alt="Profile"
+								alt="Georg Groenendaal"
 							/>
 						</picture>
 					</div>
@@ -53,14 +62,30 @@
 				</div>
 
 				<div class="flex items-center justify-center py-2 mt-2 space-x-2 md:justify-start">
-					<a class="hover:brightness-75" href="#">
+					<a
+						class="hover:brightness-75"
+						href="{base}/about"
+						aria-label="Contact me with e-mail (contact page)"
+					>
 						<iconify-icon icon="carbon:email" height="36" />
 					</a>
-					<a class="hover:brightness-75" href="#">
+					<a
+						class="hover:brightness-75"
+						href="https://www.linkedin.com/in/georggroenendaal/"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="Linkedin"
+					>
 						<iconify-icon icon="carbon:logo-linkedin" height="30" />
 					</a>
 
-					<a class="hover:brightness-75" href="#">
+					<a
+						class="hover:brightness-75"
+						href="https://github.com/GeorgGroenendaal"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="Github"
+					>
 						<iconify-icon icon="carbon:logo-github" height="30" />
 					</a>
 				</div>

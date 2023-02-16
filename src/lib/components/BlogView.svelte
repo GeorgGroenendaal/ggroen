@@ -1,13 +1,13 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import type { contentMeta } from '$lib/types';
-	import Tag from '../lib/components/Tag.svelte';
+	import Tag from './Tag.svelte';
 
-	export let content: contentMeta;
+	export let content: contentMeta[];
 	export let title = 'Blog';
 </script>
 
-<div class="rounded flex flex-grow flex-col space-y-4 md:max-w-sm min-w-0">
+<div class="rounded flex flex-grow flex-col space-y-4 min-w-0">
 	<h2 class="text-4xl font-bold">{title}</h2>
 	{#each content as b}
 		<a href="{base}/blog/{b.slug}">
@@ -18,7 +18,7 @@
 					<h3 class="text-xl font-bold">
 						{b.title}
 					</h3>
-					<p class="text-sm  text-opacity-75 font-thin">
+					<p class="text-sm flex-shrink-0 text-opacity-75 font-thin">
 						{b.date}
 					</p>
 				</div>

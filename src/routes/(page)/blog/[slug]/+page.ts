@@ -7,12 +7,11 @@ export const load = (async ({ params }) => {
 	// print current fs path
 	const post = await loadOne(slug);
 
-	const { title, date } = post.metadata;
+	const metadata = post.metadata;
 	const content = post.component;
 
 	return {
-		title: title,
-		date: date,
+		metadata,
 		content: content
 	};
 }) satisfies PageLoad;
