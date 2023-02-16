@@ -2,6 +2,8 @@ import type { RequestHandler } from './$types';
 import { website } from '$lib/info';
 import { loadMeta } from '$lib/blog';
 
+export const prerender = true;
+
 export const GET: RequestHandler = async () => {
 	const metadata = await loadMeta();
 
