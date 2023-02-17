@@ -64,7 +64,7 @@
 				<div class="flex items-center justify-center py-2 mt-2 space-x-2 md:justify-start">
 					<a
 						class="hover:brightness-75"
-						href="{base}/"
+						href="{base}/contact"
 						aria-label="Contact me with e-mail (contact page)"
 					>
 						<iconify-icon icon="carbon:email" height="36" />
