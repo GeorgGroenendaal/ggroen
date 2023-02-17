@@ -14,3 +14,8 @@ declare module '*&imagetools' {
 	const out;
 	export default out;
 }
+
+declare module 'kwesforms' {
+	// fix to make kwesforms work with sveltekit
+	export function init(): void;
+}

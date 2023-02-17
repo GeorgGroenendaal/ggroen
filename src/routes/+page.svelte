@@ -94,21 +94,22 @@
 			<div class="flex-[3_3_0%]">
 				<h2 class="mb-2 text-4xl">About me</h2>
 				<p class="font-serif text-lg">
-					Hello there, I'm Georg, a Masters student in artificial intelligence with a background in
-					software engineering. I'm passionate about exploring various topics in computer science
-					and artificial intelligence, ranging from machine learning and data analysis to natural
-					language processing and computer vision. Besides academic pursuits, I'm enthusiastic about
-					building software and products. I enjoy using my skills to develop innovative solutions
-					and improve existing systems. On this site, I'll be sharing my thoughts and insights on
-					various topics related to computer science, data science, and artificial intelligence.
-					I'll also be sharing my projects, code samples, tutorials, and other resources. If you
-					have any questions or suggestions, please don't hesitate to get in touch.
+					Hello there, I'm a Masters student in artificial intelligence (currently graduating) with
+					a background in software engineering. I'm passionate about exploring various topics in
+					computer science and artificial intelligence, ranging from machine learning and data
+					science to natural language processing and computer vision. Besides academic pursuits, I'm
+					enthusiastic about building software and products. I enjoy using my skills to develop
+					innovative solutions and improve existing systems. On this site, I'll be sharing my
+					thoughts and insights on various topics related to computer science, data science, and
+					artificial intelligence. I'll also be sharing my projects, code samples, tutorials, and
+					other resources. If you have any questions or suggestions, please don't hesitate to get in
+					touch.
 				</p>
 			</div>
 		</div>
 
 		<div class="flex flex-col justify-between space-y-4 md:space-y-0 md:flex-row md:space-x-8">
-			<div class="flex-col hidden space-y-2 md:block">
+			<div class="flex-col space-y-2">
 				<p class="mb-2 text-2xl">Interest</p>
 
 				{#each education as edu}

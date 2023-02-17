@@ -6,9 +6,8 @@
 
 	const links = {
 		'/': 'home',
-		'/blog': 'blog'
-		// '/': 'projects',
-		// '/': 'contact'
+		'/blog': 'blog',
+		'/contact': 'contact'
 	};
 </script>
 

@@ -46,6 +46,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"glob": "^8.1.0"
+		"glob": "^8.1.0",
+		"kwesforms": "^2.1.27"
 	}
 }
