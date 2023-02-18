@@ -1,5 +1,5 @@
 <script lang="ts">
-	import banner from '$lib/assets/logo_text.png?width=1200&height=600&position=left&format=webp&imagetools';
+	import banner from '$lib/assets/logo_text.png?width=1200&height=630&position=left&format=jpeg&imagetools';
 
 	export let title: string = 'Portfolio of Georg Groenendaal';
 	export let description: string =
@@ -14,3 +14,4 @@
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={banner} />
+<meta property="og:image:alt" content="website banner" />

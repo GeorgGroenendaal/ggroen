@@ -36,9 +36,9 @@
 				/>
 			</div>
 			<div
-				class="absolute z-30 hidden w-40 px-2 py-2 space-x-2 text-left border rounded-md shadow right-1 group-focus:block bg-primary-800 border-primary-900 hover:block"
+				class="absolute z-50 hidden w-40 px-2 py-2 space-x-2 text-left border rounded-md shadow right-1 group-focus:block bg-primary-800 border-primary-900 hover:block"
 			>
-				<nav class="flex flex-col space-y-2">
+				<nav class="flex flex-col space-y-2 z-50">
 					{#each Object.entries(links) as [href, label]}
 						<a class="px-2 py-1 rounded hover:brightness-75 hover:bg-primary-800" {href}>{label}</a>
 					{/each}
