@@ -15,7 +15,7 @@
 	const interests = [
 		{
 			category: 'Programming',
-			specific: 'Python, Typescript, Go and more'
+			specific: 'Python, Typescript, Java, Go and more'
 		},
 		{
 			category: 'ML and AI',
