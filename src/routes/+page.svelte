@@ -12,7 +12,24 @@
 	import profile_webp from '$lib/assets/profile.jpg?width=16;112&format=webp&srcset&imagetools';
 	import profile from '$lib/assets/profile.jpg?width=16;112&format=jpeg&srcset&imagetools';
 
-	import banner from '$lib/assets/logo_text.png?width=1200&height=600&position=left&format=webp&imagetools';
+	const interests = [
+		{
+			category: 'Programming',
+			specific: 'Python, Typescript, Go and more'
+		},
+		{
+			category: 'ML and AI',
+			specific: 'Deep Learning, Reinforcement Learning'
+		},
+		{
+			category: 'Web Development',
+			specific: 'Svelte, React, Tailwind'
+		},
+		{
+			category: 'Devops',
+			specific: 'CI/CD, Docker, Kubernetes, Terraform'
+		}
+	];
 
 	const education = [
 		{
@@ -29,6 +46,29 @@
 			degree: 'Bachelor Software Engineering',
 			institution: 'Hanze University of Applied Sciences',
 			period: '2015-2019'
+		}
+	];
+
+	const experience = [
+		{
+			role: 'Software Engineer',
+			company: 'Dataprovider.com',
+			period: 'Jul-2018 - December 2020'
+		},
+		{
+			role: 'Graduate Intern Software Engineering',
+			company: 'Alledaags',
+			period: 'Feb 2019 - Jul 2019'
+		},
+		{
+			role: 'Intern Data Scientist',
+			company: 'Dataprovider.com',
+			period: 'Feb 2018 - Jul 2018'
+		},
+		{
+			role: 'Junior Software Engineer',
+			company: 'Dataprovider.com',
+			period: 'Apr 2017 - Feb 2018'
 		}
 	];
 
@@ -111,16 +151,15 @@
 			<div class="flex-col space-y-2">
 				<p class="mb-2 text-2xl">Interest</p>
 
-				{#each education as edu}
+				{#each interests as int}
 					<div class="flex px-2 py-1 space-x-2 rounded shadow items-top bg-primary-700">
-						<iconify-icon class="pt-2" icon="carbon:education" width="30" />
+						<iconify-icon icon="mdi:head-love" class="-ml-1 mt-[0.1rem]" width="34" />
 						<div class="grow">
-							<p>{edu.degree}</p>
+							<p>{int.category}</p>
 							<div class="flex items-center justify-between w-full">
 								<p class="text-sm">
-									{edu.institution}
+									{int.specific}
 								</p>
-								<p class="ml-6 text-sm italic">{edu.period}</p>
 							</div>
 						</div>
 					</div>
@@ -149,16 +188,16 @@
 			<div class="flex-col space-y-2">
 				<p class="mb-2 text-2xl">Experience</p>
 
-				{#each education as edu}
+				{#each experience as exp}
 					<div class="flex px-2 py-1 space-x-2 rounded shadow items-top bg-primary-700">
-						<iconify-icon class="pt-2" icon="carbon:education" width="30" />
+						<iconify-icon icon="carbon:code" width="30" />
 						<div class="grow">
-							<p>{edu.degree}</p>
+							<p>{exp.role}</p>
 							<div class="flex items-center justify-between w-full">
 								<p class="text-sm">
-									{edu.institution}
+									{exp.company}
 								</p>
-								<p class="ml-6 text-sm italic">{edu.period}</p>
+								<p class="ml-6 text-sm italic">{exp.period}</p>
 							</div>
 						</div>
 					</div>

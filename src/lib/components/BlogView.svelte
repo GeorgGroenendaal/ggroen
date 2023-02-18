@@ -12,7 +12,7 @@
 	{#each content as b}
 		<a href="{base}/blog/{b.slug}">
 			<div
-				class="px-4 transition py-2 border border-opacity-0 rounded-lg hover:border-primary-700 hover:brightness-125 shadow"
+				class="px-4 transition py-2 border border-opacity-0 rounded-lg bg-white hover:border-primary-700 hover:brightness-125 shadow"
 			>
 				<div class="flex justify-between items-baseline space-x-4">
 					<h3 class="text-xl font-bold">
