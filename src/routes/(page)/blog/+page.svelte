@@ -1,4 +1,5 @@
 <script lang="ts">
+	import MetaComponent from '$lib/components/MetaComponent.svelte';
 	import BlogView from '../../../lib/components/BlogView.svelte';
 	import type { PageData } from './$types';
 
@@ -6,8 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>Blog posts</title>
-	<meta name="description" content="Overview page of all blog posts on ggroen.com" />
+	<MetaComponent title="Blog posts" description="All blog posts on ggroen.com" />
 </svelte:head>
 
 <div class="pb-[30rem]">

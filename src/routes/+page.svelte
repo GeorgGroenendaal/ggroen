@@ -1,4 +1,6 @@
 <script lang="ts">
+	import MetaComponent from '../lib/components/MetaComponent.svelte';
+
 	import BlogView from '../lib/components/BlogView.svelte';
 
 	import Tag from '../lib/components/Tag.svelte';
@@ -9,7 +11,8 @@
 	import profile_avif from '$lib/assets/profile.jpg?width=16;112&format=avif&srcset&imagetools';
 	import profile_webp from '$lib/assets/profile.jpg?width=16;112&format=webp&srcset&imagetools';
 	import profile from '$lib/assets/profile.jpg?width=16;112&format=jpeg&srcset&imagetools';
-	import { page } from '$app/stores';
+
+	import banner from '$lib/assets/logo_text.png?width=1200&height=600&position=left&format=webp&imagetools';
 
 	const education = [
 		{
@@ -33,11 +36,7 @@
 </script>
 
 <svelte:head>
-	<title>Portfolio of Georg Groenendaal</title>
-	<meta
-		name="description"
-		content="Portfolio of Georg Groenendaal - Masters student in AI and software engineer. Discover my projects, code samples, and insights on various topics related to computer science and artificial intelligence."
-	/>
+	<MetaComponent />
 </svelte:head>
 
 <div class="py-12 bg-primary-800 text-light">

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import MetaComponent from '$lib/components/MetaComponent.svelte';
 	import kwesforms from 'kwesforms'; // @ts-nocheck
 	import { onMount } from 'svelte';
 
@@ -8,14 +9,13 @@
 </script>
 
 <svelte:head>
-	<title>Contact</title>
-	<meta
-		name="description"
-		content="Contact form to reach my email. Fill in your contact details and I will be in touch as soon as possible"
+	<MetaComponent
+		title="Contact"
+		description="Contact form. Fill in your contact details and I will be in touch as soon as possible"
 	/>
 </svelte:head>
 
-<div class="max-w-3xl mx-auto p-16 pb-72">
+<div class="max-w-3xl mx-auto pb-72">
 	<h1 class="text-4xl font-bold">Contact me</h1>
 
 	<p class="text-lg font-serif my-4">

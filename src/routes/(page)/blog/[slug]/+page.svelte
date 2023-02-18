@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import MetaComponent from '$lib/components/MetaComponent.svelte';
 	import BlogView from '../../../../lib/components/BlogView.svelte';
 	import type { PageData } from './$types';
 
@@ -9,8 +10,7 @@
 </script>
 
 <svelte:head>
-	<title>{data.metadata.title}</title>
-	<meta name="description" content={data.metadata.description} />
+	<MetaComponent title={data.metadata.title} description={data.metadata.description} />
 	<meta name="keywords" content={data.metadata.tags.join(', ')} />
 </svelte:head>
 

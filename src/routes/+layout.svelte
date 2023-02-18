@@ -2,7 +2,6 @@
 	import Logo from '../lib/components/Logo.svelte';
 
 	import '../app.postcss';
-	import { page } from '$app/stores';
 
 	const links = {
 		'/': 'home',
@@ -11,7 +10,7 @@
 	};
 </script>
 
-<div class="sticky top-0 left-0 right-0 text-lg tracking-wide bg-primary-900 text-light">
+<div class="sticky top-0 left-0 right-0 text-lg tracking-wide bg-primary-900 text-light z-40">
 	<div
 		class="container flex items-center justify-between max-w-screen-xl px-4 py-3 mx-auto sm:py-6"
 	>
@@ -23,7 +22,11 @@
 			{/each}
 		</nav>
 
-		<button class="relative transition-all group sm:hidden" aria-label="Expand navigation menu">
+		<button
+			class="relative transition-all group sm:hidden"
+			aria-label="Expand navigation menu"
+			on:click={(e) => e.currentTarget.focus()}
+		>
 			<div class="flex items-center">
 				<iconify-icon
 					class="group-focus:brightness-75"
@@ -53,12 +56,10 @@
 			<Logo noText={true} />
 		</div>
 
-		<!-- copyright notice -->
 		<div>
 			<p class="text-sm">&copy; {new Date().getFullYear()} Georg Groenendaal</p>
 		</div>
 
 		<div class="grow" />
 	</div>
-	<!-- footer -->
 </div>
