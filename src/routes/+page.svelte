@@ -33,7 +33,7 @@
 
 	const education = [
 		{
-			degree: 'MSc. Artificial Intelligence',
+			degree: 'Master Artificial Intelligence',
 			institution: 'University of Groningen',
 			period: '2020-Present'
 		},
@@ -53,7 +53,7 @@
 		{
 			role: 'Software Engineer',
 			company: 'Dataprovider.com',
-			period: 'Jul-2018 - December 2020'
+			period: 'Jul-2018 - December 2021'
 		},
 		{
 			role: 'Graduate Intern Software Engineering',
