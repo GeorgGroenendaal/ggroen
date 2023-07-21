@@ -11,7 +11,8 @@
 				"svelte.svelte-vscode",
 				"esbenp.prettier-vscode",
 				"heybourn.headwind",
-				"bradlc.vscode-tailwindcss"
+				"bradlc.vscode-tailwindcss",
+				"GitHub.copilot-chat"
 			]
 		}
 	}

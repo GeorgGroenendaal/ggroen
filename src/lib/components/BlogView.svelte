@@ -7,7 +7,7 @@
 	export let title = 'Blog';
 </script>
 
-<div class="rounded flex flex-grow flex-col space-y-4 min-w-0">
+<div class="rounded flex flex-col space-y-4 md:col-span-2">
 	<h2 class="text-4xl font-bold">{title}</h2>
 	{#each content as b}
 		<a href="{base}/blog/{b.slug}">

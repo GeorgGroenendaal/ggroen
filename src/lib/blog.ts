@@ -51,7 +51,7 @@ export const loadMeta = async () => {
 		const a_converted = a.date.replace(/(\d+)-(\d+)-(\d+)/, '$2-$1-$3');
 		const b_converted = b.date.replace(/(\d+)-(\d+)-(\d+)/, '$2-$1-$3');
 
-		return Date.parse(a_converted) - Date.parse(b_converted);
+		return Date.parse(b_converted) - Date.parse(a_converted);
 	});
 
 	return response;

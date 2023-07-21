@@ -12,6 +12,18 @@
 	import profile_webp from '$lib/assets/profile.jpg?width=16;112&format=webp&srcset&imagetools';
 	import profile from '$lib/assets/profile.jpg?width=16;112&format=jpeg&srcset&imagetools';
 
+	import abstract_shapes_avif from '$lib/assets/abstract_shapes.png?width=600&height=400&position=center&format=avif&srcset&imagetools';
+	import abstract_shapes_webp from '$lib/assets/abstract_shapes.png?width=600&&heigth=400&position=center&format=webp&srcset&imagetools';
+	import abstract_shapes from '$lib/assets/abstract_shapes.png?width=600&height=400&position=center&format=jpeg&srcset&imagetools';
+
+	import printing_press_avif from '$lib/assets/printing_press.png?width=600&height=400&position=bottom&format=avif&srcset&imagetools';
+	import printing_press_webp from '$lib/assets/printing_press.png?width=600&&heigth=400&position=bottom&format=webp&srcset&imagetools';
+	import printing_press from '$lib/assets/printing_press.png?width=600&height=400&position=bottom&format=jpeg&srcset&imagetools';
+
+	import alarm_clock_avif from '$lib/assets/alarm_clock.png?width=600&height=400&position=bottom&format=avif&srcset&imagetools';
+	import alarm_clock_webp from '$lib/assets/alarm_clock.png?width=600&&heigth=400&position=bottom&format=webp&srcset&imagetools';
+	import alarm_clock from '$lib/assets/alarm_clock.png?width=600&height=400&position=bottom&format=jpeg&srcset&imagetools';
+
 	const interests = [
 		{
 			category: 'Programming',
@@ -23,7 +35,7 @@
 		},
 		{
 			category: 'Web Development',
-			specific: 'Svelte, React, Tailwind'
+			specific: 'Svelte, React, Tailwind, Django'
 		},
 		{
 			category: 'Devops',
@@ -35,7 +47,7 @@
 		{
 			degree: 'Master Artificial Intelligence',
 			institution: 'University of Groningen',
-			period: '2020-Present'
+			period: '2020-2023'
 		},
 		{
 			degree: 'Pre-Master Artificial Intelligence',
@@ -72,6 +84,39 @@
 		}
 	];
 
+	const projects = [
+		{
+			title: 'Sveltekit Portfolio',
+			description:
+				'Open-source code of this website. A static portfolio that can be hosted on github pages. Build with Sveltekit, Tailwind css. Perfect score on lighthouse.',
+			tags: ['sveltekit', 'web development'],
+			image_avif: abstract_shapes_avif,
+			image_webp: abstract_shapes_webp,
+			image: abstract_shapes,
+			link: 'https://github.com/GeorgGroenendaal/ggroen'
+		},
+		{
+			title: 'Thesis Template',
+			description:
+				"LaTeX template for a master's thesis. Well suited for theses in the field of computer science and artificial intelligence.",
+			tags: ['thesis', 'latex'],
+			image_avif: printing_press_avif,
+			image_webp: printing_press_webp,
+			image: printing_press,
+			link: 'https://github.com/GeorgGroenendaal/University-of-Groningen-Latex-Thesis-Template'
+		},
+		{
+			title: 'Pomopom.com',
+			description:
+				'A simple pomodoro timer that gives insights into your productivity and focus. Build with Django and HTMX and tailwind css for my own use.',
+			tags: ['django', 'web development'],
+			image_avif: alarm_clock_avif,
+			image_webp: alarm_clock_webp,
+			image: alarm_clock,
+			link: 'https://pomopom.com'
+		}
+	];
+
 	export let data: PageData;
 </script>
 
@@ -80,7 +125,7 @@
 </svelte:head>
 
 <div class="py-12 bg-primary-800 text-light">
-	<div class="container max-w-screen-xl px-4 mx-auto ">
+	<div class="container max-w-screen-xl px-4 mx-auto">
 		<div class="flex flex-col mb-12 md:flex-row">
 			<div class="flex flex-col flex-grow text-center md:text-left">
 				<div>
@@ -97,7 +142,7 @@
 						</picture>
 					</div>
 					<h2 class="mb-2 text-4xl">Georg Groenendaal</h2>
-					<p class="font-serif text-sm">Software engineer and student Artificial Intelligence</p>
+					<p class="font-serif text-sm">Software engineer, MSc. Artificial Intelligence</p>
 				</div>
 
 				<div class="flex items-center justify-center py-2 mt-2 space-x-2 md:justify-start">
@@ -133,23 +178,19 @@
 			<div class="flex-[3_3_0%]">
 				<h2 class="mb-2 text-4xl">About me</h2>
 				<p class="font-serif text-lg">
-					Hello there, I'm a Masters student in artificial intelligence (currently graduating) with
-					a background in software engineering. I'm passionate about exploring various topics in
-					computer science and artificial intelligence, ranging from machine learning and data
-					science to natural language processing and computer vision. Besides academic pursuits, I'm
-					enthusiastic about building software and products. I enjoy using my skills to develop
-					innovative solutions and improve existing systems. On this site, I'll be sharing my
-					thoughts and insights on various topics related to computer science, data science, and
-					artificial intelligence. I'll also be sharing my projects, code samples, tutorials, and
-					other resources. If you have any questions or suggestions, please don't hesitate to get in
-					touch.
+					Hello there, I'm a Software Engineer with a passion for Artificial Intelligence. I'm
+					passionate about exploring various topics in computer science and artificial intelligence,
+					ranging from machine learning to web development and everything in between. I'm
+					enthusiastic about building software and products. This site is a showcase of my work and
+					a place to share my thoughts and ideas. Feel free to reach out to me via linkedin or the
+					contact form if you want to get in touch.
 				</p>
 			</div>
 		</div>
 
 		<div class="flex flex-col justify-between space-y-4 md:space-y-0 md:flex-row md:space-x-8">
 			<div class="flex-col space-y-2">
-				<p class="mb-2 text-2xl">Interest</p>
+				<p class="mb-2 text-2xl">Interest and skills</p>
 
 				{#each interests as int}
 					<div class="flex px-2 py-1 space-x-2 rounded shadow items-top bg-primary-700">
@@ -207,32 +248,42 @@
 	</div>
 </div>
 
-<div
-	class="container mx-auto px-4 max-w-screen-xl py-20 flex flex-col md:flex-row md:space-x-12 space-y-12 md:space-y-0"
->
-	<div class="rounded flex flex-col space-y-4 flex-grow">
-		<h2 class="text-4xl font-bold">Projects</h2>
+<div class="container mx-auto px-4 max-w-screen-xl py-20 grid gap-12 grid-cols-1 md:grid-cols-6">
+	<div class="rounded flex flex-col space-y-4 grow md:col-span-4">
+		<h2 class="text-4xl font-bold">My work</h2>
 
 		<div class="grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 grid items-end gap-6">
-			{#each [1] as z}
-				<a href="/" class="disabled opacity-80 saturate-0 cursor-default">
-					<div
-						class="transition shadow bg-white rounded-lg border border-opacity-0 border-primary-700 brightness-125"
-					>
+			{#each projects as proj}
+				<a
+					class="group shadow bg-white rounded-lg border border-opacity-0 hover:border-opacity-100 transition border-primary-700 h-full flex flex-col"
+					href={proj.link}
+					target="_blank"
+				>
+					<div class="relative">
+						<picture class="transition-all group-hover:saturate-100 saturate-0">
+							<source type="image/avif" srcset={proj.image_avif} />
+							<source type="image/webp" srcset={proj.image_webp} />
+							<img
+								srcset={proj.image_webp}
+								class="object-cover rounded-sm w-full rounded-t-lg"
+								loading="lazy"
+								alt={proj.title}
+							/>
+						</picture>
 						<div
-							class="h-32 bg-gradient-to-tl from-primary-400 to-primary-800 rounded-t-lg border-b border-primary-900"
+							class="absolute w-full h-full bg-green-200/30 transition group-hover:opacity-0 z-10 top-0 rounded-t-lg"
 						/>
+					</div>
 
-						<div class="px-4 pt-2 pb-4">
-							<h3 class="text-xl font-bold">Sveltekit static portfolio starter</h3>
-							<p class="text-sm">
-								(Coming soon) Open sourced template of this website, built with Sveltekit, Tailwind
-								and hosted on Github Pages.
-							</p>
-
-							<div class="pt-4">
-								<Tag>coming soon</Tag>
-							</div>
+					<div class="px-4 pt-2 pb-4 flex flex-col grow">
+						<h3 class="text-xl font-bold">{proj.title}</h3>
+						<p class="text-sm grow">
+							{proj.description}
+						</p>
+						<div class="pt-4">
+							{#each proj.tags as tag}
+								<Tag>{tag}</Tag>
+							{/each}
 						</div>
 					</div>
 				</a>
